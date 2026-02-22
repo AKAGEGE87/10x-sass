@@ -1,0 +1,17 @@
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin btn{
+  font-family: "David Libre", serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  box-shadow: 0 4px 4px #0000001a;
+  border-radius: 20px 0 20px 0;
+  padding: 16px 31px;
+  border: none;
+  cursor: pointer;
+}

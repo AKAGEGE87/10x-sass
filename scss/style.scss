@@ -1,0 +1,168 @@
+@import "./base/home";
+@import "./abstract/mixins";
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1512px;
+  margin: 0 auto;
+  padding: 0 180px;
+}
+
+header {
+  @include flex-align-center;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin-bottom: 196px;
+
+  nav {
+    @include flex-align-center;
+    gap: 161px;
+
+    ul {
+      @include flex-align-center;
+      gap: 45px;
+
+      li {
+        // position: relative;
+        a {
+          display: inline-block;
+          color: #000;
+          text-align: center;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%; /* 24px */
+          transition-property: all;
+          transition-duration: 0.3s;
+          transition-timing-function: linear;
+        }
+
+        a:hover {
+          color: #ea6d27;
+          transform: translateY(-10px) scale(1.1);
+          // transform: scale(2.1);
+        }
+      }
+    }
+  }
+}
+
+.header_btn {
+  @include btn;
+  color: #fff;
+  background-color: #ea6d27;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.header_btn:hover {
+  background-color: #fff;
+  color: #ea6d27;
+}
+
+.hero {
+  @include flex-align-center;
+
+  gap: 126px;
+  margin-bottom: 250px;
+}
+
+.left_hero {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
+}
+
+.left_hero_circle_text {
+  position: relative;
+  left: -70px;
+  width: 104px;
+  display: inline-block;
+  cursor: pointer;
+}
+.left_hero_circle_text:hover {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.left_hero_box_texts {
+  display: flex;
+  flex-direction: column;
+  gap: 69px;
+  h2 {
+    font-family: "David Libre", serif;
+    font-size: 70px;
+
+    font-weight: bold;
+    line-height: 72px;
+    color: #101a24;
+  }
+
+  p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    max-width: 376px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #5c6574;
+  }
+  margin-bottom: 9px;
+}
+
+.btn_box {
+  display: flex;
+  gap: 34px;
+  margin-bottom: 94px;
+}
+
+.btn_box_btn {
+  @include btn;
+  color: #fff;
+  background-color: #ea6d27;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.btn_box_btn:hover {
+  background-color: #101a24;
+}
+
+.soc_icons {
+  @include flex-align-center;
+
+  gap: 17px;
+  a {
+    display: inline-block;
+    border: 1px solid #000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    @include flex-align-center;
+    justify-content: center;
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+  }
+
+  a:hover {
+    background-color: #ea6d27;
+    border: 1px solid #7b7474;
+    transform: translateY(-10px) scale(1.3);
+  }
+  margin-bottom: 68px;
+}
