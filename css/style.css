@@ -34,6 +34,7 @@ header nav ul {
   gap: 45px;
 }
 header nav ul li a {
+  position: relative;
   display: inline-block;
   color: #000;
   text-align: center;
@@ -49,6 +50,44 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #ea6d27;
   transform: translateY(-10px) scale(1.1);
+}
+header nav ul li a::before {
+  content: "";
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+header nav ul li a:hover::before {
+  width: 100%;
+}
+
+.header_img {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 2px;
+}
+
+.header_img::before {
+  content: "";
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+
+.header_img:hover::before {
+  width: 100%;
 }
 
 .header_btn {

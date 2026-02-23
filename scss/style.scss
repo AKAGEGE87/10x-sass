@@ -1,5 +1,5 @@
 @import "./base/home";
-@import "./abstract/mixins";
+@import "./abstract/home";
 
 body {
   font-family: "Inter", sans-serif;
@@ -28,6 +28,7 @@ header {
       li {
         // position: relative;
         a {
+          position: relative;
           display: inline-block;
           color: #000;
           text-align: center;
@@ -46,9 +47,48 @@ header {
           transform: translateY(-10px) scale(1.1);
           // transform: scale(2.1);
         }
+
+        a::before {
+          content: "";
+          width: 0px;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #000;
+          z-index: 1;
+          transition: all 0.3s linear;
+        }
+        a:hover::before {
+          width: 100%;
+        }
       }
     }
   }
+}
+
+.header_img {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 2px;
+}
+
+.header_img::before {
+  content: "";
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+
+.header_img:hover::before {
+  width: 100%;
 }
 
 .header_btn {
